@@ -2,9 +2,9 @@
 
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyle from "@/styles/global-styles";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GlobalStyle />
-      <body className={inter.className}>
+      <body className={openSans.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>

@@ -29,7 +29,6 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
-        font-family: "Montserrat", sans-serif;
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
@@ -39,7 +38,6 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     body {
         line-height: 1;
         background-color: var(--white-200);
-        font-family: 'Montserrat', sans-serif;
         position: relative;
         min-height: 100vh;
         display: flex;
