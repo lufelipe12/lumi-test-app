@@ -15,6 +15,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       headerName: "n. do cliente",
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -23,6 +24,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       editable: true,
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -31,6 +33,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       editable: true,
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -40,6 +43,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       editable: true,
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -47,6 +51,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       headerName: "total(R$)",
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -54,6 +59,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       headerName: "invoice",
       width: 190,
       editable: false,
+      headerClassName: "styledHeader",
       renderCell: (params) => (
         <a href={params.value} target="_blank" rel="noopener noreferrer">
           <MdPageview />

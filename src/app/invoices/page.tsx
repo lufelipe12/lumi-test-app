@@ -7,7 +7,7 @@ import InvoicesTable from "@/components/card";
 export default function Invoices() {
   return (
     <S.Container>
-      <S.StyledH1>Invoices</S.StyledH1>
+      <S.StyledTitle>Faturas</S.StyledTitle>
       <S.TableContainer>
         <InvoicesTable invoices={valuesMock} />
       </S.TableContainer>
