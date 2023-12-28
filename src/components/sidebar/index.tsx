@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaRegChartBar, FaListUl } from "react-icons/fa";
+import { useState } from "react";
 
 import Logo from "../../../public/lumi-logo.png";
 import * as S from "./styles";
-import { useState } from "react";
 
 export const Sidebar = () => {
   const [onPage, setOnPage] = useState<"dash" | "invoices">("dash");
