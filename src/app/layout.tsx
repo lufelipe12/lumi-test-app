@@ -1,9 +1,9 @@
 "use client";
+import { Open_Sans } from "next/font/google";
 
 import { Sidebar } from "@/components/sidebar";
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyle from "@/styles/global-styles";
-import { Open_Sans } from "next/font/google";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -15,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GlobalStyle />
+
       <body className={openSans.className}>
         <Sidebar />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
