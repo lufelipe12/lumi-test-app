@@ -46,6 +46,9 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     button{
         cursor: pointer;      
     }
+    a{
+        text-decoration: none;
+    }
     ol, ul {
         list-style: none;
     } 

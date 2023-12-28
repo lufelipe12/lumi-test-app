@@ -1,5 +1,6 @@
 "use client";
 
+import { Sidebar } from "@/components/sidebar";
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyle from "@/styles/global-styles";
 import { Open_Sans } from "next/font/google";
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <GlobalStyle />
       <body className={openSans.className}>
+        <Sidebar />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
