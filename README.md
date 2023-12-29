@@ -19,5 +19,5 @@ $ npm run dev
 
 ## Documentação
 
-- [Trello](https://trello.com/b/CbXSmTDW/lumi-web)
+- [Trello](https://trello.com/invite/b/CbXSmTDW/ATTI80f078c86b56cefb5062384305bc9bf0FFD22308/lumi-web)
 - [Figma](https://www.figma.com/file/xAHAHgvEa8EiU7Rtt7jHbs/Lumi-App?type=design&node-id=0%3A1&mode=design&t=eVwauBBVsw1Gii87-1)
