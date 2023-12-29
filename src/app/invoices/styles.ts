@@ -36,6 +36,7 @@ export const StyledTitle = styled.h1`
   text-align: center;
   color: var(--green-dark);
   font-weight: 600;
+  padding-bottom: 3rem;
 `;
 
 export const ToggleSection = styled.section`
@@ -43,9 +44,4 @@ export const ToggleSection = styled.section`
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-`;
-
-export const StyledH1 = styled.h1`
-  text-align: center;
-  padding-bottom: 3rem;
 `;

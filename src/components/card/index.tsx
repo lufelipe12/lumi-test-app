@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Box from "@mui/material/Box";
 import { MdPageview } from "react-icons/md";
@@ -5,7 +7,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import { ApiResponse } from "@/interfaces/api-response.interface";
 
 interface DataGridProps {
-  invoices: ApiResponse;
+  invoices?: ApiResponse;
 }
 
 export default function InvoicesTable({ invoices }: DataGridProps) {
@@ -15,6 +17,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       headerName: "n. do cliente",
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -23,6 +26,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       editable: true,
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -31,6 +35,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       editable: true,
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -40,6 +45,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       editable: true,
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -47,6 +53,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       headerName: "total(R$)",
       width: 190,
       headerAlign: "left",
+      headerClassName: "styledHeader",
       align: "left",
     },
     {
@@ -54,6 +61,7 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
       headerName: "invoice",
       width: 190,
       editable: false,
+      headerClassName: "styledHeader",
       renderCell: (params) => (
         <a href={params.value} target="_blank" rel="noopener noreferrer">
           <MdPageview />
@@ -62,17 +70,19 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
     },
   ];
 
-  const rows = invoices.data.map((invoice) => {
-    return {
-      id: invoice.id,
-      clientNumber: invoice.clientNumber,
-      year: `${invoice.month}/${invoice.year}`,
-      contribution: invoice.contribution,
-      electricity: invoice.electricity,
-      total: invoice.total,
-      billUrl: invoice.billUrl,
-    };
-  });
+  const rows = invoices
+    ? invoices?.data.map((invoice) => {
+        return {
+          id: invoice.id,
+          clientNumber: invoice.clientNumber,
+          year: `${invoice.month}/${invoice.year}`,
+          contribution: invoice.contribution,
+          electricity: invoice.electricity,
+          total: invoice.total,
+          billUrl: invoice.billUrl,
+        };
+      })
+    : [];
 
   return (
     <Box
@@ -88,11 +98,11 @@ export default function InvoicesTable({ invoices }: DataGridProps) {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: invoices.pageSize,
+              pageSize: 5,
             },
           },
         }}
-        pageSizeOptions={[invoices.pageSize]}
+        pageSizeOptions={[5, 10]}
         checkboxSelection
         disableRowSelectionOnClick
       />
