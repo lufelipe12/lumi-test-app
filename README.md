@@ -1,6 +1,6 @@
 ## Lumi Web App
 
-Um projeto front-end que consome uma api com informações relevantes de faturas de energia elétrica. Os dados recebidos são disponibilizados em um gráfico no dashboard e as fatura nas páginas destinadas a ela. Link da aplicação [Lumi-Test-APP](https://lumi-test-api-production.up.railway.app/v1/docs](https://lumi-test-app.vercel.app/)
+Um projeto front-end que consome uma api com informações relevantes de faturas de energia elétrica. Os dados recebidos são disponibilizados em um gráfico no dashboard e as fatura nas páginas destinadas a ela. Link da aplicação [Link-Test-App](https://lumi-test-app.vercel.app/)
 
 ## Instalação/Rodando a aplicação
 
