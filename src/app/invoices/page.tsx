@@ -1,15 +1,26 @@
 "use client";
 
 import * as S from "./styles";
-import { valuesMock } from "@/mocks/values.mock";
 import InvoicesTable from "@/components/card";
+import { useInvoices } from "@/providers/invoices";
+import { useEffect } from "react";
 
 export default function Invoices() {
+  const { getInvoices, invoices } = useInvoices();
+
+  useEffect(() => {
+    async function fetchData() {
+      await getInvoices();
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <S.Container>
-      <S.StyledH1>Invoices</S.StyledH1>
+      <S.StyledTitle>Faturas</S.StyledTitle>
       <S.TableContainer>
-        <InvoicesTable invoices={valuesMock} />
+        <InvoicesTable invoices={invoices} />
       </S.TableContainer>
     </S.Container>
   );
