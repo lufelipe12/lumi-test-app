@@ -10,16 +10,17 @@ import {
   CartesianGrid,
 } from "recharts";
 
-import { valuesMock } from "@/mocks/values.mock";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { ApiResponse } from "@/interfaces/api-response.interface";
 
 interface ChartsProps {
   type: string;
+  invoices?: ApiResponse;
 }
 
-export const Charts = ({ type }: ChartsProps) => {
+export const Charts = ({ type, invoices }: ChartsProps) => {
   const defineByType = () => {
-    return valuesMock.data.map((value) => {
+    return invoices?.data?.map((value) => {
       return {
         consumo:
           type == "kwh"
